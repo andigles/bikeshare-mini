@@ -1,3 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#                                                              
+# PROGRAMMER: Andres Iglesias
+# DATE CREATED: 08/02/2025                                 
+# REVISED DATE: 
+# PURPOSE: Main code for bikeshare project.
+##
+
+# Import python modules
+
 import time
 import pandas as pd
 import numpy as np
