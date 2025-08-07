@@ -16,6 +16,10 @@ import numpy as np
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+              
+VALID_CITIES = ["chicago", "new your city", "washington"]
+VALID_MONTHS = ["all", "january", "february", "march", "april", "may", "june"] # Data available only up to june
+VALID_DAYS = ["all", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
 def get_filters():
     """
@@ -27,13 +31,27 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
+    
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-
+    while True:
+        city = input("Select your city (chicago, new york city, washington): ").lower()
+        if city in VALID_CITIES:
+            break
+        print("Invalid city. Type one of the available cities (chicago, new york city, washington)")
 
     # get user input for month (all, january, february, ... , june)
-
+    while True:
+        month = input("Enter month (all, january, february, march, april, may, june): ").lower()
+        if month in VALID_MONTHS:
+            break
+        print("Invalid month. Type one of the available options for month (all, january, february, march, april, may, june)")
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
+    while True:
+        day = input("Enter day of week (all, monday, tuesday, wednesday, thursday, friday, saturday, sunday): ").lower()
+        if day in VALID_DAYS:
+            break
+        print("Invalid day. Type one of the available options for day (all, monday, tuesday, wednesday, thursday, friday, saturday, sunday)")
 
 
     print('-'*40)
@@ -51,7 +69,22 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-
+    # Load data from selected city
+    df = pd.read_csv(CITY_DATA[city])
+    #print(df.head())
+    
+    # Convert Start Time column in datetime format
+    df["Start Time"] = pd.to_datetime(df["Start Time"])
+    
+    # Select month from the data
+    if month != "all":
+        df = df[df["Start Time"].dt.month_name().str.lower() == month]
+        
+    if day != "all":
+        df = df[df["Start Time"].dt.day_name().str.lower() == day]
+        
+    print(f"df shape: {df.shape}")
+    print(f"first 5 rows of df:\n {df.head()}")
 
     return df
 
