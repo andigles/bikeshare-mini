@@ -1,0 +1,4 @@
+Start Time,End Time,Trip Duration,Start Station,End Station,User Type,Gender,Birth Year
+2017-01-01 00:07:57,2017-01-01 00:20:53,776,Streeter Dr & Grand Ave,Millennium Park,Subscriber,Male,1985
+2017-02-14 08:45:10,2017-02-14 09:05:42,1232,Clark St & Elm St,State St & Randolph St,Customer,Female,1992
+2017-03-03 12:00:00,2017-03-03 12:18:21,1101,Canal St & Adams St,Dearborn St & Erie St,Subscriber,,1980
