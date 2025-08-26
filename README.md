@@ -1,21 +1,33 @@
+# Bikeshare Analysis — Git & Pandas Mini-Project
+
 [![CI](https://github.com/andigles/pdsnd_github/actions/workflows/ci.yml/badge.svg)](https://github.com/andigles/pdsnd_github/actions/workflows/ci.yml)
 
-### Date created
-August 2nd, 2025.
+**Scope:** Fork of a Udacity project to practice **Git/GitHub**. I turned it into a small, **reproducible** demo: tiny sample CSV files, a tested non-interactive analysis (`analysis.py`), and **CI** (continuous integration) with GitHub Actions that runs tests on every push.
 
-### Project Title
-Bikeshare Project
+---
 
-### Description
-The goal of the Bikeshare project is to use Python to explore data related to bike share systems.
+## What this shows (in one line)
+A simple **CLI** (command-line interface) friendly analysis that reads bikeshare trips and computes basic stats by city/month/day using pandas.
 
-### Files used
-Below is an overview of the main files and directories in this repository:
+---
 
-- **`bikeshare.py`**: Core Python scripts for the application logic.
-- **`.gitignore`**: Ignores files like `*.csv`.
-- **`README.md`**: Documentation for setup, usage, and project details.
+## Quickstart (runs in minutes)
 
-### Credits
-Based and forked from https://github.com/udacity/pdsnd_github original project.
+> Prerequisite: Python 3.10+ installed.
 
+```bash
+# 1) (optional) create & activate a virtual environment
+python -m venv .venv
+# Windows Git Bash:
+source .venv/Scripts/activate
+# Windows PowerShell:
+# .\.venv\Scripts\Activate.ps1
+# macOS/Linux:
+# source .venv/bin/activate
+
+# 2) install dependencies and run the tests
+pip install -r requirements.txt
+pytest -q
+
+# 3) (optional) run the original interactive script from the course
+python bikeshare.py
