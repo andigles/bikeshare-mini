@@ -1,3 +1,5 @@
+[![CI](https://github.com/andigles/pdsnd_github/actions/workflows/ci.yml/badge.svg)](https://github.com/andigles/pdsnd_github/actions/workflows/ci.yml)
+
 ### Date created
 August 2nd, 2025.
 
