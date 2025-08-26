@@ -1,2 +1,27 @@
-*.csv
-.github/**
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Environments
+.venv/
+venv/
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Data (ignore big raw dumps; keep tiny samples committed)
+data/
+es committed)
+data/
